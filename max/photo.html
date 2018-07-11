@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<title>Photo profolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,h1 {font-family: "Raleway", Arial, sans-serif}
+    h1 {letter-spacing: 6px}
+    .w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+    <!-- Header -->
+    <div>
+    <header class="w3-panel w3-center " style="padding:128px 16px">
+        <a href="index.html" class="w3-xxlarge w3-button">Maxis Mayonaise</a>
+        <div class="w3-padding">
+            <div class="w3-bar w3-white w3-round">
+                <button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,'London')">Urban</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Paris')">Landscape</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Event</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Skyline</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">Nature</button>
+                <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Tokyo')">You</button>
+
+            </div>
+        </div>
+        </header>
+    <!-- Photo Grid -->
+        <div id="London" class="w3-container city" style="display:none">
+            <div class="w3-half">
+                <img src="1.png" style="width:100%">
+                <img src="2.png" style="width:100%">
+                <img src="3.png" style="width:100%">
+                <img src="4.png" style="width:100%">
+                <img src="5.png" style="width:100%">
+                <img src="6.png" style="width:100%">
+                <img src="7.png" style="width:100%">
+            </div>
+
+            <div class="w3-half">
+                <img src="7.png" style="width:100%">
+                <img src="6.png" style="width:100%">
+                <img src="5.png" style="width:100%">
+                <img src="1.png" style="width:100%">
+                <img src="3.png" style="width:100%">
+                <img src="2.png" style="width:100%">
+            </div>
+        </div>
+
+        <div id="Paris" class="w3-container city" style="display:none">
+            <!-- Grid for photos -->
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                    <img src="1.png" style="width:100%">
+                    <img src="2.png" style="width:100%">
+                    <img src="3.png" style="width:100%">
+                </div>
+
+                <div class="w3-half">
+                    <img src="4.png" style="width:100%">
+                    <img src="5.png" style="width:100%">
+                    <img src="6.png" style="width:100%">
+                    <img src="7.png" style="width:100%">
+                </div>
+                <!-- End photo grid -->
+            </div>
+        </div>
+
+        <div id="Tokyo" class="w3-container city" style="display:none">
+            <div class="w3-row" id="myGrid" style="margin-bottom:128px">
+                <div class="w3-third">
+                    <img src="1.png" style="width:100%">
+                    <img src="2.png" style="width:100%">
+                    <img src="3.png" style="width:100%">
+                    <img src="4.png" style="width:100%">
+                    <img src="5.png" style="width:100%">
+                    <img src="6.png" style="width:100%">
+                </div>
+
+                <div class="w3-third">
+                    <img src="4.png" style="width:100%">
+                    <img src="5.png" style="width:100%">
+                    <img src="6.png" style="width:100%">
+                    <img src="7.png" style="width:100%">
+                    <img src="1.png" style="width:100%">
+                    <img src="2.png" style="width:100%">
+                </div>
+
+                <div class="w3-third">
+                    <img src="6.png" style="width:100%">
+                    <img src="7.png" style="width:100%">
+                    <img src="1.png" style="width:100%">
+                    <img src="2.png" style="width:100%">
+                    <img src="3.png" style="width:100%">
+                    <img src="4.png" style="width:100%">
+                </div>
+            </div>
+
+
+    </div>
+    <!-- End Page Content -->
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+<script>
+    function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " w3-red";
+    }
+</script>
+</body>
+</html>
+
