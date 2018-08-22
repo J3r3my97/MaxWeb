@@ -3,13 +3,25 @@
 <title>Photo profolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/docs.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+<!-- Custom styles for this template -->
+<link href="product.css" rel="stylesheet">
 <style>
     body,h1 {font-family: "Raleway", Arial, sans-serif}
     h1 {letter-spacing: 6px}
     .w3-row-padding img {margin-bottom: 12px}
+
+
 </style>
 <body>
 
@@ -34,27 +46,69 @@
         </header>
     <!-- Photo Grid -->
         <div id="London" class="w3-container city" style="display:none">
-            <div class="w3-half">
-                <img src="1.png" style="width:100%">
-                <img src="2.png" style="width:100%">
-                <img src="3.png" style="width:100%">
-                <img src="4.png" style="width:100%">
-                <img src="5.png" style="width:100%">
-                <img src="6.png" style="width:100%">
-                <img src="7.png" style="width:100%">
+
+            <div class="position-relative overflow-hidden text-lg-right bg-light">
+                <div class="container-fluid">
+                    <img class="img-fluid"  src="IMG_5734.jpg">
+                    <div class="card-img-overlay align-middle">
+                        <h1 class="display-4 font-weight-normal">Best of Urban pictures</h1>
+                        <p class="lead font-weight-normal">you wont believe this</p>
+                        <a class="btn btn-outline-secondary" href="#">lets go</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w3-container w3-padding-32" id="projects">
+                <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">A closer look </h3>
+            </div>
+            <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+                <div class="row">
+                    <div class="card text-center img-fluid ml-auto mr-lg-4 w3-half" style="width:500px">
+                        <img class="card-img-top" src="2.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Urban streets</h4>
+                            <p class="card-text w3-text-gray">explore the concrete jungle</p>
+                            <a href="#" class="btn btn-dark">view collections</a>
+                        </div>
+                    </div>
+
+                    <div class="card img-fluid mr-auto ml-lg-4 w3-half" style="width:500px">
+                        <img class="card-img-top" src="2.png" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text w3-text-gray">explore the concrete jungle.</p>
+
+                            <a href="#" class="btn btn-dark">See Profile</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="w3-half">
-                <img src="7.png" style="width:100%">
-                <img src="6.png" style="width:100%">
-                <img src="5.png" style="width:100%">
-                <img src="1.png" style="width:100%">
-                <img src="3.png" style="width:100%">
-                <img src="2.png" style="width:100%">
-            </div>
-        </div>
+            <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 
-        <div id="Paris" class="w3-container city" style="display:none">
+                <div class="row">
+                    <div class="card img-fluid ml-auto mr-lg-4 w3-half" style="width:500px">
+                        <img class="card-img-top" src="2.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="w3-text-white w3-cell-middle">Some example text some example text. Some example text some example text. Some example text some example text. Some example text some example text.</p>
+                            <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="card img-fluid mr-auto ml-lg-4 w3-half" style="width:500px">
+                        <img class="card-img-top" src="2.png" alt="Card image" style="width:100%">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">John Doe</h4>
+                            <p class="card-text w3-text-white">Some example text some example text. Some example text some example text. Some example text some example text. Some example text some example text.</p>
+                            <a href="#" class="btn btn-primary">See Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="Paris" class="w3-container city" style="display:none">
             <!-- Grid for photos -->
             <div class="w3-row-padding" style="margin:0 -16px">
                 <div class="w3-half">

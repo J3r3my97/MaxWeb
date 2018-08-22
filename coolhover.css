@@ -119,3 +119,132 @@ a:visited {
     font-style: normal;
     font-weight: 400;
 }
+
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:700";
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+
+bodyyy {
+    background-color: #fdfbff;
+    text-align: center;
+    line-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.box {
+    position:relative;
+    vertical-align: middle;
+    color: #fdfbff;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    transition: 0.5s;
+    padding: 0 20px;
+    cursor: pointer;
+    border: 2px solid #fdfbff;
+    -webkit-transition:0.5s;
+}
+
+.box:hover {
+    border: 2px solid rgba(0,160,80,0);
+    color: #FFF;
+}
+
+.box::before, .box::after {
+    width: 100%;
+    height:100%;
+    z-index: 3;
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    transition: 0.5s;
+}
+
+.foo::before {
+    border-bottom: 3px solid #FFF;
+    border-left: 3px solid #FFF;
+    -webkit-transform-origin: 0 100%;
+}
+
+.foo::after {
+    border-top: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    -webkit-transform-origin: 100% 0%;
+}
+
+
+.bar::before {
+    border-bottom: 3px solid #FFF;
+    border-left: 3px solid #FFF;
+    -webkit-transform-origin: 100% 0%;
+}
+
+.bar::after {
+    border-top: 3px solid #FFF;
+    border-right: 3px solid #FFF;
+    -webkit-transform-origin: 0% 100%;
+}
+
+.curmudgeon::before {
+    border-bottom: 3px solid #FFF;
+    border-left: 0;
+    -webkit-transform-origin: 0% 100%;
+}
+
+.curmudgeon::after {
+    border-top: 0;
+    border-right: 0;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.box:hover::after, .box:hover::before {
+    -webkit-transform: scale(1);
+}
+
+.link {
+    line-height: 1em;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    height: 50px;
+    font-family: "Open Sans","Roboto",Arial,sans-serif;
+    text-align: right;
+}
+
+.link > a {
+    text-decoration: none;
+    color: #FF0;
+}
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript,
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(maxmmh-logo-FINAL.gif)center no-repeat #fff;
+}

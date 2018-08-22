@@ -7,8 +7,17 @@
 <link rel="stylesheet" href="googlelato.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="coolhover.css">
+<link rel="stylesheet" href="snap.css">
+<link rel="stylesheet" href="css/docs.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<script src="preloader.js"></script>
+
 
 <style>
+
+
     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
     body, html {
         height: 100%;
@@ -17,7 +26,7 @@
     }
 
     /* Create a Parallax Effect */
-    .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, bgimg-5 {
+    #myvid,.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, bgimg-5 {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -27,13 +36,14 @@
     /* First image (Logo. Full height) */
     .bgimg-1 {
         background-image: url("IMG_5771.jpg");
-        min-height: 100%;
+        min-height: 90%;
+        max-height: 100%;
     }
 
     /* Second image (Portfolio) */
     .bgimg-2 {
-        background-image: url("IMG_5734.jpg");
-        min-height: 800px;
+        background-image: url("Photography_BOUrban/Photography_BOUrban_9.jpg");
+        min-height: 400px;
     }
 
     /* Third image (Contact) */
@@ -58,15 +68,27 @@
 
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1024px) {
-        .bgimg-1, .bgimg-2, .bgimg-3 {
+        .bgimg-1, .bgimg-2, .bgimg-3 .bgimg-4.bgimg-5{
             background-attachment: scroll;
         }
     }
 
+    #myvid {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
 
 </style>
-<body>
 
+
+
+<body>
+<div class="se-pre-con"></div>
 <!-- Sidebar
 <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
@@ -108,9 +130,13 @@
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="support-scrollsnap"></div>
+<div class="bgimg-1 w3-display-container " id="home">
+    <video autoplay muted loop id="myvid">
+        <source src="Portfolio%20High%20Quality_1.mp4" type="Video/mp4">
+    </video>
     <div class="w3-display-middle" >
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">Max</span> Mayonaise</span>
+
     </div>
 </div>
 
@@ -119,14 +145,46 @@
 
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min" id="photo">
+<div class="bgimg-2 w3-display-container " id="photo">
     <div class="w3-display-middle">
-        <p><span  class="w3-xxlarge w3-text-white w3-wide">PHOTOGRAPHY</span></p>
-        <div class="w3-center">
-        <p><a class="btn-draw" href="photo.html"><span> view gallery</span></a></p>
+        <span class="w3-xxlarge w3-text-white w3-wide">PHOTOGRAPHY</span>
+    </div>
+
+</div>/
+
+<!-- Container (Portfolio Section) -->
+
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <div class="card-deck">
+        <div class="card img-fluid">
+            <img class="card-img-top" src="8788.jpg" alt="Card image" style="width:100%">
+            <div class="card-img-overlay">
+
+                <div class="w3-display-middle w3-xlarge">
+                <a href="photo2.html" target="_blank"><div class="box bar">Urban</div></a>
+            </div>
+            </div>
+        </div>
+        <div class="card img-fluid">
+            <img class="card-img-top" src="IMG_5983.jpg" alt="Card image" style="width:100%">
+            <div class="card-img-overlay text-lg-center">
+
+                <div class="w3-display-middle w3-xlarge">
+                    <a href="photo2.html" target="_blank"><div class="box foo">Landscape</div></a>
+                </div>
+
+            </div>
+        </div>
+        <div class="card img-fluid text-center">
+            <img class="card-img-top" src="IMG_5976.jpg" alt="Card image" style="width:100%">
+            <div class="card-img-overlay text-lg-center">
+                <div class="w3-display-middle w3-xlarge">
+                    <a href="photo2.html" target="_blank"><div class="box curmudgeon">Events</div></a>
+                </div>
+            </div>
         </div>
     </div>
-</div>/
+</div>
 
 
 
@@ -135,15 +193,18 @@
 
 
 <!-- Third Parallax Image with Logo Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min" id="vid">
+<div class="bgimg-3 w3-display-container w3-opacity-min " id="vid">
     <div class="w3-display-middle" >
-        <span class="w3-xxlarge w3-text-white w3-wide">VIDEOGRAPHY</span>
+        <p><span  class="w3-xxlarge w3-text-white w3-wide">Videography</span></p>
+        <div class="w3-center">
+            <p><a class="btn-draw" href="photo.html"><span> view gallery</span></a></p>
+        </div>
     </div>
 </div>
 
 
 <!-- Fourth Parallax Image with Logo Text -->
-<div class="bgimg-4 w3-display-container w3-opacity-min" id="motion">
+<div class="bgimg-4 w3-display-container w3-opacity-min " id="motion">
     <div class="w3-display-middle" >
         <span class="w3-xxlarge w3-text-white w3-wide">MOTION GRAPHIC</span>
     </div>
@@ -217,6 +278,8 @@
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
     }
+
+
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
